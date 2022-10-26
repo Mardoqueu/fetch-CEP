@@ -1,11 +1,7 @@
 const cep = document.querySelector('#cep')
 
 const showData = (result) => {
-    for (const campo in result) {
-        if(document.querySelector('#'+campo)){
-            document.querySelector('#'+campo).value = result[campo]
-        }
-    }
+    for
 }
 
 cep.addEventListener('blur', (e) => {
@@ -18,7 +14,7 @@ cep.addEventListener('blur', (e) => {
 
     fetch(`https://viacep.com.br/ws/${search}/json/`, options)
     .then((response) =>{response.json()
-        .then(data => showData(data))
+        .then(data => console.log(data))
     })
     .catch(e => console.log('Deu Error: '+ e.message))
 
